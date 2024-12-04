@@ -6,6 +6,9 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "start:monorepositorytrain1": "nest start monorepositorytrain1",
+    "start:newname": "nest start newname",
+    "start:all": "npm-run-all --parallel start:monorepositorytrain1 start:newname",
     "build": "nest build",
     "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
     "start": "nest start",
@@ -22,7 +25,10 @@
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/microservices": "^10.4.13",
     "@nestjs/platform-express": "^10.0.0",
+    "amqp-connection-manager": "^4.1.14",
+    "amqplib": "^0.10.5",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },
@@ -40,6 +46,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "jest": "^29.5.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.0.0",
     "source-map-support": "^0.5.21",
     "supertest": "^7.0.0",

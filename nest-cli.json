@@ -27,6 +27,24 @@
       "compilerOptions": {
         "tsConfigPath": "apps/newname/tsconfig.app.json"
       }
+    },
+    "newthird": {
+      "type": "application",
+      "root": "apps/newthird",
+      "entryFile": "main",
+      "sourceRoot": "apps/newthird/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/newthird/tsconfig.app.json"
+      }
+    },
+    "new333": {
+      "type": "application",
+      "root": "apps/new333",
+      "entryFile": "main",
+      "sourceRoot": "apps/new333/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/new333/tsconfig.app.json"
+      }
     }
   }
 }
