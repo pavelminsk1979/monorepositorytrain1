@@ -6,23 +6,18 @@ export class AppControllerMain {
   constructor(@Inject('NEW_NAME_SERVICE') private client: ClientProxy) {}
 
   @Get('sum/:num1/:num2/:num3')
-  async sumNumber(
+  sumNumber(
     @Param('num1') num1: string,
     @Param('num2') num2: string,
     @Param('num3') num3: string,
   ) {
-    try {
-      const res = [Number(num1), Number(num2), Number(num3)];
+    const res = [Number(num1), Number(num2), Number(num3)];
 
-      const pattern = { cmd: 'sum1' };
-      console.log('1111111');
+    const pattern = { cmd: 'sum1' };
+    console.log('1111111');
 
-      const result = await this.client.send<number>(pattern, res);
+    const result = this.client.send<number>(pattern, res);
 
-      return result;
-    } catch (e) {
-      console.log('error');
-      console.log(e);
-    }
+    return result;
   }
 }
